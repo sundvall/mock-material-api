@@ -1,0 +1,49 @@
+[
+  {
+    "id": 6,
+    "productId": "MEDPRO0000001876",
+    "productname": "Aname",
+    "info": "Some info about the 1876 product",
+    "packages": [
+      {
+        "id": 11,
+        "packageId": "PACKAG0000001163",
+        "productId": "MEDPRO0000001871"
+      },
+      {
+        "id": 12,
+        "packageId": "PACKAG0000001165",
+        "productId": "MEDPRO0000001871",
+        "restrictions": "Y"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "productId": "MEDPRO0000001887",
+    "productname": "Bname",
+    "info": "Some info about the 1887 product",
+    "packages": [
+      {
+        "id": 16,
+        "packageId": "PACKAG0000003822",
+        "productId": "MEDPRO0000001876",
+        "restrictions": "Y"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "productId": "MEDPRO0000002926",
+    "productname": "Cname",
+    "info": "Some info about the 2926 product",
+    "packages": [
+      {
+        "id": 19,
+        "packageId": "PACKAG0000005647",
+        "productId": "MEDPRO0000002926",
+        "restrictions": "Y"
+      }
+    ]
+  }
+]

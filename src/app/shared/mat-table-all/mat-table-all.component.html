@@ -1,0 +1,37 @@
+<p>Click on a table row to get more info about a product.</p>
+
+<mat-form-field>
+  <input matInput placeholder="search product name" #input />
+</mat-form-field>
+    
+<div class="spinner-container" *ngIf="(dataSource.loading$ | async)">
+  <mat-spinner></mat-spinner>
+</div>
+
+<mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+  <ng-container matColumnDef="productId">
+    <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+    <mat-cell *matCellDef="let product">{{ product.productId }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="productName">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let product">
+      {{ product.productname }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="productInfo">
+    <mat-header-cell *matHeaderCellDef>Info</mat-header-cell>
+    <mat-cell *matCellDef="let product">
+      {{ product.info }}
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+  <mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    (click)="onRowClicked(row)"
+  ></mat-row>
+</mat-table>

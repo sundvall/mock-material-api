@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>{{ data.produktnamn }}</h1>
+<div mat-dialog-content>
+  <p>{{ data.productId }}</p>
+  
+  <p>packageIds:</p>
+  <ul>
+    <li *ngFor="let pack of data.packages">{{pack.packageId}}</li>
+  </ul>
+  <mat-form-field>
+    <input matInput placeholder="update field" [(ngModel)]="data.someinput" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No</button>
+  <button mat-button [mat-dialog-close]="data.someinput" cdkFocusInitial>
+    Yes
+  </button>
+</div>
