@@ -1,4 +1,4 @@
-# angular material + mock api
+# angular material + angular-in-memory-web-api
 
 The application connects to a mocked database and displays the result in an angular-material table.
 
